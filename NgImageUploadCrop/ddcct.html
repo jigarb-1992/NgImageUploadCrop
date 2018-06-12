@@ -1,0 +1,26 @@
+<div onclick="document.getElementById('fileInput').click();" style="width: 100%; height: 100%">
+    <span>Drag Image Here</span>
+    <input id="fileInput" type="file" accept="image/*" style="display:none;" hidden="hidden" />
+    
+    <div id="imageCrop">
+        <img ng-src="{{myCroppedImage1}}"/>
+    </div>
+</div>
+
+<div class="croparea" id="display">
+    <div class="modal-content">
+        <div>
+            <button ng-click="CloseFn()" class="close" id="close">&times;</button>
+        </div>
+        <div class="cropArea12345" id="actImage">
+            <img-crop area-type="square" image="image" result-image="myCroppedImage" change-on-fly="true"></img-crop>
+
+        </div>
+       
+        <div>
+            <button ng-click="CropFn()" class="crop" id="crop">Crop</button>
+        
+        </div>
+    </div>
+</div>
+</div>
