@@ -1,0 +1,112 @@
+<html>
+
+<head>
+    <title>AngularJSDirectiveDrag&Drop</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://cdn.rawgit.com/alexk111/ngImgCrop/master/compile/minified/ng-img-crop.js"></script>
+	<script src="ng.js"></script>
+    <style>
+    .dropzone {
+        width: 200px;
+        height: 200px;
+        border: 1px solid #ccc;
+        text-align: center;
+        padding: 15px;
+        margin: 20px;
+        font-family: Arial;
+    }
+    
+    .dropzone:hover {
+      background: rgba(0,0,0,0.2);  
+    }
+    
+    .image-container {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .image-container img {
+        max-width: 100%;
+    }
+    
+    .file-name {
+        font-family: Arial;
+    }
+    
+    img-crop {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: relative;
+        overflow: hidden
+    }
+    
+    img-crop canvas {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        outline: 0;
+        -webkit-tap-highlight-color: transparent
+    }
+    
+    .cropArea12345 {
+        overflow: hidden;
+        width: 500px;
+        height: 350px;
+    }
+    
+    .imgCrop {
+        display: block;
+    }
+    
+    .crop {
+        display: none;
+    }
+    
+    .close {
+        display: none;
+    }
+    
+    .croparea {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        /*padding-top: 100px;*/
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    
+    .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 15px;
+        border: 1px solid #888;
+        width: 38%;
+        height: 58%;
+        top: 50%;
+        position: relative;
+        transform: translateY(-50%);
+    }
+    </style>
+</head>
+
+<body>
+    <div ng-app="myapp">
+        <div class="dropzone" file-dropzone="[image/png, image/jpeg, image/gif]" file="image" file-name="imageFileName" data-max-file-size="3">
+          
+        </div>
+        
+        <div class="dropzone" file-dropzone="[image/png, image/jpeg, image/gif]" file="image" file-name="imageFileName" data-max-file-size="3">
+          
+        </div>
+    </div>
+    
+</body>
+
+</html>
